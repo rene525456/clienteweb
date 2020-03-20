@@ -73,10 +73,23 @@ WSGI_APPLICATION = 'gestion_riesgos.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+"""DATABASES = {
+    'default': {
+        #'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'gestion_riesgos',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'db.gestion_riesgos'),
     }
 }
 

@@ -1,0 +1,14 @@
+INSTALAR POSTGRES
+sudo apt-get install postgresql postgresql-contrib
+sudo apt-get install postgresql
+sudo apt-get install pgadmin3
+sudo -i -u postgres
+psql
+create databases gestion_riesgos
+
+pip freeze   -> para ver los paquetes instalados en django
+
+pip install psycopg2
+pip install psycopg2-binary
+
+https://devcode.la/tutoriales/como-conectar-django-con-postgres-en-ubuntu/
