@@ -1,0 +1,49 @@
+ul.fotos{
+	width: 970px;
+	margin: 25 10 0px 10px
+}
+
+ul.fotos li{
+	display: inline;
+}
+
+ul.fotos a {
+	display: inline;
+	float: left;
+	margin: 15 15 15px 15px ;
+	width: auto;
+	text-align: center;
+	color: #333
+	font-size: 18px;
+	box-shadow: 10 3px 6px rgba(0, 100, 100, .25);
+	transform: rotate(2deg);
+}
+
+ul.fotos img {
+	display: block;
+	width: 190px;
+	margin-bottom: 12px;
+}
+
+ul.fotos a::after {
+	content: attr(title);
+}
+
+ul.fotos li:nth-child(3n) a {
+	transform: none;
+	position: relative;
+}
+
+ul.fotos li:nth-child(5n) a {
+	transform: rotate(-5deg);
+	position: relative;
+	right: : 15px;
+}
+
+ul.fotos li a:hover{
+	transform: scale(1.25);
+	box-shadow: 0 3px 6px rgba(0,0,0,.5); 
+	position: relative;
+}
+
+

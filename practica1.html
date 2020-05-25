@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Componente html</title>
+</head>
+<body>
+	<h3>Lista desplegables</h3>
+	<label>Selecciona una universidad:</label>
+	<input list="lista" name="lista">
+	<datalist id="lista">
+		<option value="UNL"/>
+		<option value="UTPL"/>
+		<option value="Internacional"/>
+	</datalist>
+
+	<h3>Autocomplete</h3>
+	<label>E-mail</label><input type="email" name="correo" autocomplete="on"> <br>
+
+	<h3>No Autocomplete</h3>
+	<label>E-mail</label><input type="email" name="correo" autocomplete="off"> <br>
+
+	<h3>patrones</h3>
+	<form>
+		<label>Genero:</label> <input type="text" name="genero" pattern="[f-m]{1}" title="Ingrese m o f">
+		<input type="submit" value="Validar">	
+	</form>
+
+	<h3>Entradas Numéricas, Spinner</h3>
+	<input type="number" name="points" step="2"> <label>por 2</label> <br>
+	<input type="number" name="points" step="3"> <label>por 3</label> <br>
+
+	<h3>Requeridos</h3>
+	<form>
+		Username: <input type="text" name="username" required>
+		<input type="submit" value="Validar">
+	</form>
+
+	<h3>Videos</h3>
+	<video width="320" height="240">
+		<source src="media/Binomio_de_oro_Como_duele_el_frio.mp4" type="video/mp4">
+	</video>
+	<video width="320" height="240" controls>
+		<source src="media/Binomio_de_oro_Como_duele_el_frio.mp4" type="video/mp4">
+	</video>
+
+	<h3>Audio</h3>
+	<audio controls="">
+		<source src="media/bendita_la_luz.mp3" type="audio/ogg">
+	</audio>
+
+	<h3>Tipos de entradas</h3>
+	<input type="datetime-local" name="meeting-time" value="2019-05-12T19:30"
+       min="2018-06-07T00:00" max="2018-06-14T00:00"> <br>
+
+	<h3>Listas desordenadas</h3>
+	<ol>
+		<li>html</li>
+		<li>css</li>
+		<li>javascript</li>
+	</ol>
+
+	<h3>Listas desordenadas</h3>
+	<ul>
+		<li>html</li>
+		<li>css</li>
+		<li>javascript</li>
+	</ul>
+
+	<h3>Imagenes</h3>
+	<img src="imagenes/32.jpeg">
+	<br>
+
+	<h3>Formularios</h3>
+	<form>
+		<label>Número Uno: </label><input type="text" placeholder="Ingrese el primer numero">	
+		<label>Número Dos: </label><input type="text" placeholder="Ingrese el segundo numero">	
+		<input type="submit" value="Sumar">
+	</form>
+	<br>
+	<form>
+		<input type="text" name="" placeholder="nombres">
+		<input type="text" name="" placeholder="usuario">
+		<input type="radio" name="">Recuerdame
+		<input type="submit" value="Enviar">
+	</form>
+	<br>
+
+	<form action="/action_page.php">
+  		<p>Selecciones su género:</p>
+  		<input type="radio" id="male" name="gender" value="masculino">
+  		<label for="male">Masculino</label><br>
+  		<input type="radio" id="female" name="gender" value="femenino" checked>
+  		<label for="female">Femenino</label><br>
+  		<input type="radio" id="other" name="gender" value="otros">
+  		<label for="other">Otros</label>
+	</form>
+
+</body>
+</html>
