@@ -4,118 +4,257 @@
 	<meta charset="utf-8">
 	<title>Bootstrap</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="estilos/carusel.css">
 </head>
+
 <body>	
+	<header>
+	  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+	    <a class="navbar-brand" href="#">Datos Personales</a>
+	    <div class="collapse navbar-collapse" id="navbarCollapse">
+	      <ul class="navbar-nav mr-auto">
+	        <li class="nav-item active">
+	          <a class="nav-link" href="#">Docencia <span class="sr-only">(current)</span></a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Capacitaciones</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Proyectos</a>
+	        </li>
+	      </ul>
+	      <form class="form-inline mt-2 mt-md-0">
+	        <input class="form-control mr-sm-2" type="text" placeholder="Usuario" aria-label="Search">
+	        <input class="form-control mr-sm-2" type="password" placeholder="Clave" aria-label="Search">
+	        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ingrear</button>
+	      </form>
+	    </div>
+	  </nav>
+	</header>
 
-	<div>
-		<div class="accordion" id="accordionExample">
-		  <div class="card">
-		    <div class="card-header" id="headingOne">
-		      <h2 class="mb-0">
-		        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-		          Collapsible Group Item #1
-		        </button>
-		      </h2>
+	<main role="main">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		    <ol class="carousel-indicators">
+		      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		      <li data-target="#myCarousel" data-slide-to="1"></li>
+		      <li data-target="#myCarousel" data-slide-to="2"></li>
+		    </ol>
+		    <div class="carousel-inner">
+		      <div class="carousel-item active">
+		        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+		        <div class="container">
+		          <div class="carousel-caption">
+		            <img class="carousel-img" src="imagenes/pamplona.jpg">
+		          </div>
+		        </div>
+		      </div>
+		      <div class="carousel-item">
+		        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+		        <div class="container">
+		          <div class="carousel-caption">
+		            <img class="carousel-img" src="imagenes/roma.jpg">
+		          </div>
+		        </div>
+		      </div>
+		      <div class="carousel-item">
+		        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+		        <div class="container">
+		          <div class="carousel-caption">
+		            <img class="carousel-img" src="imagenes/paris.jpg">
+		          </div>
+		        </div>
+		      </div>
 		    </div>
+		    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+		      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		      <span class="sr-only">Previous</span>
+		    </a>
+		    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+		      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		      <span class="sr-only">Next</span>
+		    </a>
+		  </div>
 
-		    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-		      <div class="card-body">
-		        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+
+		<div class="row mb-2">
+		    <div class="col-md-6">
+		      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+		        <div class="col p-4 d-flex flex-column position-static">
+		          <strong class="d-inline-block mb-2 text-primary">Datos Personales</strong>
+		          <div class="mb-1 text-muted">Edwin René Guamán Quiche</div>
+		          <div class="mb-1 text-muted">1104097553</div>
+		          <div class="mb-1 text-muted">rguaman@unl.edu.ec</div>
+		          <a href="#" class="stretched-link">Continue reading</a>
+		        </div>
+		        <div class="col-auto d-none d-lg-block">
+		          <img src="imagenes/rene.jpg" width="200" height="200">
+		        </div>
+		      </div>
+		    </div>
+		    <div class="col-md-6" width="200" height="250">
+		      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+		        <div class="col p-4 d-flex flex-column position-static">
+		          <strong class="d-inline-block mb-2 text-success">Formación Académica</strong>
+		          <div class="mb-1 text-muted">Ingeniero en Sistemas
+		          <br>Universidad Nacional de Loja</div>
+		          <div class="mb-1 text-muted">Máster Universitario es Sistemas Informáticos Avanzados
+		          <br>Universidad Nacional de Loja</div>
+		          <div class="mb-1 text-muted">Universidad de la Plata</div>
+		        </div>
+			        
 		      </div>
 		    </div>
 		  </div>
-		  <div class="card">
-		    <div class="card-header" id="headingTwo">
-		      <h2 class="mb-0">
-		        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-		          Collapsible Group Item #2
-		        </button>
-		      </h2>
-		    </div>
-		    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-		      <div class="card-body">
-		        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-		      </div>
-		    </div>
-		  </div>
-		  <div class="card">
-		    <div class="card-header" id="headingThree">
-		      <h2 class="mb-0">
-		        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-		          Collapsible Group Item #3
-		        </button>
-		      </h2>
-		    </div>
-		    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-		      <div class="card-body">
-		        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-		      </div>
-		    </div>
-		  </div>
-		</div>
+		</div>	
+
+
+
+		<div id="accordion" role="tablist" aria-multiselectable="true">
+	        <div class="card">
+	          <div class="card-header" role="tab" id="headingOne">
+	            <h5 class="mb-0">
+	              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	                Experiencia Docente
+	              </a>
+	            </h5>
+	          </div>
+
+	          <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+	            <div class="card-block">
+	            	<ul class="list-group mb-3">
+				        <li class="list-group-item d-flex justify-content-between lh-condensed">
+				          <div>
+				            <h6 class="my-0">Universidad Nacional de Loja</h6>
+				            <small class="text-muted">2008 - 2014</small>
+				          </div>
+				          <div>
+				            <h6 class="my-0">Programación Avanzada, Plataformas Web, Programación I, Lenguaje Ensamblador</h6>
+				          </div>
+				        </li>
+				        <li class="list-group-item d-flex justify-content-between lh-condensed">
+				          <div>
+				            <h6 class="my-0">Universidad Técnica de Manabí</h6>
+				            <small class="text-muted">2014 - 2015</small>
+				          </div>
+				          <div>
+				            <h6 class="my-0">Programación Web, Programación II, Sistemas Distribuidos, Sistemas de Información Gerencial</h6>
+				            
+				          </div>
+				        </li>
+				        <li class="list-group-item d-flex justify-content-between lh-condensed">
+				          <div>
+				            <h6 class="my-0">Universidad Laica Eloy Alfaro de Manabí</h6>
+				            <small class="text-muted">2017 - 2018</small>
+				          </div>
+				          <div>
+				            <h6 class="my-0">Programación Web, Programación Web, Programacion POO</h6>
+				          </div>
+				      </li>
+				  </ul>
+	              
+	            </div>
+	          </div>
+	        </div>
+	        <div class="card">
+	          <div class="card-header" role="tab" id="headingTwo">
+	            <h5 class="mb-0">
+	              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+	                Curso Realizados
+	              </a>
+	            </h5>
+	          </div>  
+	          <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+	            <div class="card-block">
+	              <ul class="list-group mb-3">
+				        <li class="list-group-item d-flex justify-content-between lh-condensed">
+				        	Programación Híbrida
+				        </li>
+				        <li class="list-group-item d-flex justify-content-between lh-condensed">
+				        	Entornos virtuales de Aprendizaje
+				        </li>
+				        <li class="list-group-item d-flex justify-content-between lh-condensed">
+				        	Escritura de Artículos Científicos
+				        </li>
+				        <li class="list-group-item d-flex justify-content-between lh-condensed">
+				        	Inglés Nivel 3
+				        </li>
+				        <li class="list-group-item d-flex justify-content-between lh-condensed">
+				        	Aplicaciones Móviles
+				        </li>
+				        <li class="list-group-item d-flex justify-content-between lh-condensed">
+				        	Metodología Ágiles
+				        </li>
+				  </ul>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="card">
+	          <div class="card-header" role="tab" id="headingThree">
+	            <h5 class="mb-0">
+	              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+	                Proyectos de Investigación
+	              </a>
+	            </h5>
+	          </div>
+	          <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+	            <div class="card-block">
+	              Sin datos
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+      
+<div class="jumbotron">
+	<div class="alert alert-success" role="alert">
+  		Referencias
 	</div>
-
-	<div>
-		
-		<p>
-		  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
-		  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
-		  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
-		</p>
-		<div class="row">
-		  <div class="col">
-		    <div class="collapse multi-collapse" id="multiCollapseExample1">
-		      <div class="card card-body">
-		        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-		      </div>
-		    </div>
-		  </div>
-		  <div class="col">
-		    <div class="collapse multi-collapse" id="multiCollapseExample2">
-		      <div class="card card-body">
-		        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-		      </div>
-		    </div>
-		  </div>
-		</div>
-
-	</div>
-	<h5>Tablas</h5>
 	<table class="table table-striped">
-	  <thead>
-	    <tr>
-	      <th scope="col">#</th>
-	      <th scope="col">First</th>
-	      <th scope="col">Last</th>
-	      <th scope="col">Handle</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    <tr>
-	      <th scope="row">1</th>
-	      <td>Mark</td>
-	      <td>Otto</td>
-	      <td>@mdo</td>
-	    </tr>
-	    <tr>
-	      <th scope="row">2</th>
-	      <td>Jacob</td>
-	      <td>Thornton</td>
-	      <td>@fat</td>
-	    </tr>
-	    <tr>
-	      <th scope="row">3</th>
-	      <td>Larry</td>
-	      <td>the Bird</td>
-	      <td>@twitter</td>
-	    </tr>
-	  </tbody>
-	</table>
+		<tr>
+          <TD>Nombres y Apellidos</TD>
+          <TD>Cargo</TD>
+          <TD>Correo</TD>
+        </tr>
+        <tr>
+          <TD>Karina Patricia Zumba</TD>
+          <TD>Guaman</TD>
+          <TD>patricia@hotmial.com</TD>
+        </tr>
+        <tr>
+          <TD>Daniel</TD>
+          <TD>Quezada</TD>
+          <TD>danie@gmail.com</TD>
+        </tr>
+        <tr>
+          <TD>Manuel</TD>
+          <TD>Valarezo</TD>
+          <TD>manuco@yahoo.es</TD>
+        </tr>
+      </table>
+</div>
+	
 
-	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+      
+
+		
 
 
+
+		<footer class="container">
+		    <p class="float-right"><a href="#">Back to top</a></p>
+			<p>&copy; 2017-2020 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+		</footer>
+
+
+
+	</main>
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
 </body>
 </html>
