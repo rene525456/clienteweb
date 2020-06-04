@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Contador cookies</title>
+	<script src="js/cookies.js"></script>
+	<script>
+		window.onload = function(){
+			var c = getCookie('contador');
+			if(c === null){
+				setCookie('contador',1);
+			}else{
+				setCookie('contador', ++c);
+			}
+			var repintar = document.getElementById("resultado");
+			repintar.innerHTML = 'Nro Visitas: ' + c;
+		}
+	</script>
+</head>
+<body>
+	<h1>Contador de visitas</h1>
+	<p id="resultado"></p>
+</body>
+</html>

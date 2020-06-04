@@ -16,6 +16,12 @@ function realizar_operacion(){
 		case 2:
 			resultado = entrada1 - entrada2;
 			break;
+		case 3:
+			resultado = entrada1 * entrada2;
+			break;
+		case 4:
+			resultado = entrada1 / entrada2;
+			break;
 	}
 
 	document.getElementById("resultado").innerHTML = resultado;
