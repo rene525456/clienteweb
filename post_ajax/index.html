@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ajax post</title>
+</head>
+<body>
+	<button onclick="sentRequest()">Enviar petición AJAX</button>
+	<div id="contenedor"></div>
+
+	<script>
+		function sentRequest(){
+			var objeto = new XMLHttpRequest();
+			objeto.open("POST","peticiones_servidor.php",true);
+			objeto.setRequestHeader('Content.Type','application/x-www-form-urlencoded');
+			objeto.onreadystatechange = function(){
+				if(objeto.readyState === 4 & objeto === 200){
+					document.getElementById("contenedor").innerHTML = objeto.responseText;
+				}
+			}
+			objeto.send('username=RENE&password=miclave');
+		}
+	</script>
+</body>
+</html>	

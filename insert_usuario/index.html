@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Insertar jquery</title>
+	<script src="js/jquery-3.2.1.min.js"></script>
+
+</head>
+<body>
+	<form id="frmajax" method="POST">
+		<label>Nombre:</label><input type="text" name="nombre" placeholder="Ingrese su nombre"><br>
+		<label>Apellidos:</label><input type="text" name="apellidos" placeholder="Ingrese su apellidos"><br>
+		<label>Usuario:</label><input type="text" name="usuario" placeholder="Ingrese su usuario"><br>
+		<label>Password:</label><input type="text" name="password" placeholder="Ingrese su password"><br>
+		<button id="guardar">Guardaar</button>
+	</form>
+
+</body>
+</html>
+
+<script>
+	$(document).ready(function(){
+		$('#guardar').click(function(){
+			var datos = $('#frmajax').serialize();
+			$.ajax({
+				type:"POST",
+				url:"insertar.php",
+				data: datos
+				success: function(data){
+					if(data == 1){
+						alert("Se guardó correctamente");
+					}else{
+						alert("No guardó correctamente");
+					}
+				}
+			});
+			return false;
+		});
+	});	
+</script>
