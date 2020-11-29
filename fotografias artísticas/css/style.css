@@ -1,0 +1,858 @@
+@import url('https://fonts.googleapis.com/css?family=News+Cycle|Satisfy');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /*cuando especificamos width o height sera siempre fijo*/
+}
+
+body {
+	margin: 8px;
+}
+
+header {
+	width: 100%;
+	background-color: #c0c;
+	display: flex; /*convierte la cabecera de la web en un contenedor flexbox*/
+	align-items: center; /*centra los elementos flex de manera vertical*/
+}
+
+	header > h1 {
+		padding: 1.3em 1.3em 1em 1.4em;
+	}
+
+		header > h1 > a > img {
+			padding: .3em;
+			background-color: #fff;
+			border-radius: 7%;
+			border-top: solid 3px gray;
+			border-bottom: solid 3px gray;
+		}
+
+	header > p {
+		color: #fff;
+		width: 75%;
+		text-align: center;
+		font-size: 3em;
+		font-family: 'Satisfy';
+	}
+
+input#chk {
+	display: none;
+}
+
+label[for="chk"] {
+	cursor: pointer;
+	display: none;
+}
+
+	i#btn-menu {
+		font-size: 30px;
+		padding: .4em .5em;
+	}
+
+	i#btn-menu:hover {
+		background-color: rgba(0, 0, 0, .3);
+	}
+
+nav {
+	background-color: #fff;
+	width: 100%;
+}
+
+	nav > ul {
+		display: flex;
+		list-style: none;
+		padding: 15px 0 14px 0;
+		justify-content: center;
+	}
+
+		/* con la propiedad flex grow hariamos que cada enlace del menu creciese a lo largo del espacio disponible
+		nav > ul > li {
+			flex-grow: 1;
+		}*/
+
+		nav > ul > li > a {
+			padding: 15px 20px;
+			text-decoration: none;
+			color: #4d4d33;
+		}
+
+		/*para cuando se pasa el cursor por encima*/
+		nav > ul > li > a:hover {
+			color: #fff;
+			background-color: #c0c;
+			cursor: pointer; /*para que el cusor se convierta en mano*/
+			transition: all 300ms; /*crea el efecto con una transición lenta*/
+		}
+
+main {
+	background-color: #BABABA;
+	font-family: 'News Cycle';
+	width: 100%;
+	padding-bottom: 50px;
+}
+
+	main > h2 {
+		padding: 1.3em .6em;
+		color: #000;
+	}
+
+footer {
+	width: 100%;
+	background-color: #E3CA10;
+	padding: 1.3em 0;
+}
+
+	footer > p {
+		text-align: center;
+		color: #fff;
+		display: flex;
+		justify-content: space-between; /*coloca los elementos flex en posiciones equidistantes*/
+		font-size: 1.2em;
+	}
+
+		footer > p > a {
+			margin: 0 1.5em;
+		}
+
+		footer > p > a {
+			color: #fff;
+		}
+
+		footer > p > a:hover, footer > p > a ~ a { /*~ se refiere a un hermano no inmediato de a*/
+			text-decoration: none;
+		}
+
+		footer > p > a ~ a:hover {
+			color: #191919;
+		}
+
+
+
+/*CSS PARA LA PÁGINA index.html*/
+
+main > p {
+	width: 100%;
+	padding: 20px;
+	text-align: center; /*funciona cuando la etiqueta presente es de tipo texto, en cualquier otro caso margin: auto*/
+	font-size: 1.3em;
+}
+
+	main > p > a {
+		color: #191919;
+	}
+
+	main > p > a:hover {
+		color: #c0c;
+	}
+
+section#coleccion-fotos {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap; /*distribuye los elementos flex en varias lineas si es necesario de izquierda a derecha y de arriba a abajo*/
+	justify-content: center; /*justifica los elementos flex en el centro del viewport*/
+	text-align: center;
+}
+
+	/*despues de un section siempre va un h2-h5*/
+	section#coleccion-fotos > h2 {
+		display: none;
+	}
+
+	section#coleccion-fotos > article {
+		max-width: 300px;
+		background-color: #6B6B6B;
+		margin: 30px;
+	}
+
+	section#coleccion-fotos > article:hover {
+		background-color: #c0c;
+		transition: all .3s;
+	}
+
+		section#coleccion-fotos > article > hgroup {
+			padding: 5px 0;
+		}
+
+			section#coleccion-fotos > article > hgroup > h3 > a,
+			section#coleccion-fotos > article > hgroup > h4 > a {
+				text-decoration: none;
+				color: #fff;
+			}
+
+			section#coleccion-fotos > article > hgroup > h3 > a:hover,
+			section#coleccion-fotos > article > hgroup > h4 > a:hover {
+				color: #E3CA10;
+			}
+
+		section#coleccion-fotos > article > p {
+			padding-bottom: 5px;
+		}
+
+			section#coleccion-fotos > article > p > i {
+				padding: 2px 4px;
+			}
+
+			i[class="fas fa-heart"],
+			section#coleccion-fotos > article > p > i:first-child,
+			section#detalles-foto > div > div > p > i[class="fas fa-heart"],
+			section#detalles-foto > div > div > p > i[class="fas fa-heart"] > a {
+				color: #E00F0F;
+			}
+
+			i[class="fas fa-star"],
+			section#coleccion-fotos > article > p > i[class="fas fa-star"],
+			section#detalles-foto > div > div > p > i[class="fas fa-star"],
+			section#detalles-foto > div > div > p > i[class="fas fa-star"] > a {
+				color: #E4E009;
+			}
+
+			i[class="fas fa-comments"],
+			section#coleccion-fotos > article > p > i[class="fas fa-comments"],
+			section#detalles-foto > div > div > p > i[class="fas fa-comments"],
+			section#detalles-foto > div > div > p > i[class="fas fa-comments"] > a {
+				color: #191919;
+			}
+
+				section#coleccion-fotos > article > p > i:last-child > a,
+				section#coleccion-fotos > article > p > i:last-child,
+				section#detalles-foto > div > div > p > i,
+				section#detalles-foto > div > div > p > i > a {
+					color: #0D5208;
+				}
+
+				section#coleccion-fotos > article > p > i:last-child > a:hover {
+					text-decoration: none;
+				}
+
+
+
+
+/*CSS PARA LA PÁGINA login.html Y registro.html*/
+
+.formulario {
+	width: 100%;
+	height: 3em;
+	padding: .8em;
+	border: none;
+	border-radius: 2%;
+	border-bottom: solid 2px #c0c;
+	background-color: rgba(0, 0, 0, .7);
+	color: #fff;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+textarea:hover {
+	background-color: #000;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+	border-bottom: solid 2px #fff;
+}
+
+main > form#form-info,
+section#acerca-de {
+	width: 40%;
+	margin: 50px auto;
+	background-color: rgba(0, 0, 0, .4);
+}
+
+	main > form#form-info > div,
+	main > form#new-photo > div {
+		width: 85%;
+		margin: 0 auto;
+	}
+
+	main > form#form-info > div:not(#container-login) {
+		padding-top: 10px;
+	}
+
+	main > form#form-info > div#container-login {
+		padding-top: 1.5em;
+	}
+
+	main > form#form-info > div#container-pass {
+		padding-top: 10px;
+		padding-bottom: 1.7em;
+	}
+
+	main > form#form-info > div#container-email {
+		padding-bottom: 1.7em;
+	}
+
+		main > form#form-info > div > label {
+			display: block;
+			color: #fff;
+		}
+
+		main > form#form-info > div > label:hover {
+			color: #E3CA10;
+		}
+
+	main > form#form-info > div#container-submit, main > form > div#container-text {
+		padding-bottom: .7em;
+	}
+
+		main > form#form-info > div > input[type="submit"] {
+			width: 100%;
+			height: 2.8em;
+			background-color: #c0c;
+			border: none;
+			cursor: pointer;
+			margin-top: .7em;
+		}
+
+		main > form#form-info > div > input[type="submit"]:hover {
+			background-color: #FF51FF;
+		}
+
+		main > form#form-info > div > p {
+			text-align: center;
+			color: #fff;
+		}
+
+			main > form#form-info > div > p > a {
+				color: #fff;
+			}
+
+			main > form#form-info > div > p > a:hover {
+				color: #E3CA10;
+				text-decoration: none;
+			}
+
+
+
+
+/*CSS PARA LA PÁGINA buscar.html*/
+
+section#filtros {
+	width: 100%;
+}
+	
+	section#filtros > h3 {
+		margin: .6em 0;
+		text-align: center;
+	}
+
+	section#filtros > h3:last-child {
+		margin-top: 1.3em;
+	}
+
+	section#filtros > form#filtros-texto {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+		section#filtros > form#filtros-texto > div {
+			margin: .3em 1em 1em 1em;
+			width: 20%;
+		}
+
+			section#filtros > form#filtros-texto > div > label {
+				display: block;
+			}
+
+			section#filtros > form#filtros-texto > div > label:hover {
+				color: #c0c;
+			}
+
+	section#filtros > form#filtros-radio {
+		width: 50%;
+		margin: 0 auto;
+	}
+
+		section#filtros > form#filtros-radio > div {
+			display: flex;
+			justify-content: center;
+			padding: 5px 0;
+		}
+
+		section#filtros > form#filtros-radio > div:first-child {
+			border-bottom: solid 1px #c0c;
+		}
+
+		section#filtros > form#filtros-radio > div:last-child {
+			border-top: solid 1px #c0c;
+		}
+
+			section#filtros > form#filtros-radio > div > div {
+				margin: 0 .7em;
+			}
+
+				section#filtros > form#filtros-radio > div > div > i {
+					display: none;
+				}
+
+
+
+
+/*CSS PARA LA PÁGINA foto.html*/
+
+section#detalles-foto {
+	margin-bottom: 4.5em;
+}
+
+	section#detalles-foto > h2 {
+		padding: 1.3em 0 2em .6em;
+		color: #000;
+	}
+
+	section#detalles-foto > div {
+		width: 100%;
+		display: flex;
+		align-items: center; /*centra los elementos de manera vertical*/
+		justify-content: center; /*centra los elementos de manera horizontal a lo largo del espacio*/
+		margin-top: 1em;
+	}
+
+		section#detalles-foto > div > a {
+			margin-right: 1em;
+		}
+
+		section#detalles-foto > div > div {
+			margin-left: 1em;
+		}
+
+			section#detalles-foto > div > div > p {
+				margin: .7em;
+			}
+
+				section#detalles-foto > div > div > p > a#nom {
+					color: #000;
+				}
+
+					section#detalles-foto > div > div > p > i > a,
+					section#detalles-foto > div > div > p > a#nom {
+						text-decoration: none;
+					}
+
+					section#detalles-foto > div > div > p > i > a:hover,
+					section#detalles-foto > div > div span:hover,
+					section#detalles-foto > div > div > p > a#nom:hover {
+						color: #c0c;
+						transition: all .3s;
+					}
+
+section#zona-comentarios {
+	width: 75%;
+	margin: 5px auto 50px auto;
+}
+
+	section#zona-comentarios > div,
+	section#zona-comentarios > form {
+		width: 80%;
+		margin: auto;
+	}
+
+	section#zona-comentarios h3 {
+		text-align: center;
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+
+	section#zona-comentarios > div {
+		margin-top: 100px;
+		border-radius: 1%;
+		border: solid 3px rgba(0, 0, 0, .4);
+		background-color: rgba(0, 0, 0, .4);
+	}
+
+		section#zona-comentarios > div > h3 {
+			color: #fff;
+		}
+
+		section#zona-comentarios > form > div:not(#buttom-comment) {
+			padding: .7em 0;
+		}
+
+		section#zona-comentarios > div > article {
+			width: 90%;
+			margin: 60px auto 3em auto;
+			border-radius: 1%;
+			border: solid 2px rgba(0, 0, 0, .4);
+			background-color: #fff;
+		}
+
+		section#zona-comentarios > div > article:hover {
+			border: solid 2px #c0c;
+		}
+
+		section#zona-comentarios > form > div#buttom-comment {
+			margin-top: 20px;
+			display: flex;
+			flex-direction: row-reverse;
+		}
+
+			section#zona-comentarios > form > div#buttom-comment > input {
+				width: 180px;
+				height: 40px;
+				border-radius: 2%;
+				background-color: #c0c;
+				border: none;
+				cursor: pointer;
+			}
+
+			section#zona-comentarios > form > div#buttom-comment > input:hover,
+			form#new-photo > div:last-child > input:hover {
+				background-color: #FF51FF;
+			}
+
+			section#zona-comentarios > div > article > div {
+				width: 95%;
+				margin: auto;
+				padding: .7em 0;
+			}
+
+			section#zona-comentarios > form > div > label,
+			section#zona-comentarios > div > div > input {
+				display: block;
+			}
+
+			section#zona-comentarios > form > div > label:hover {
+				color: #c0c;
+			}
+
+			section#zona-comentarios > form > div:not(#buttom-comment) > input {
+				width: 100%;
+			}
+
+			section#zona-comentarios > form > div > textarea {
+				height: 90px;
+			}
+
+			section#zona-comentarios > form > div:not(#buttom-comment) > input,
+			section#zona-comentarios > form > div > textarea {
+				border: none;
+				border-radius: 1%;
+			}
+
+				section#zona-comentarios > div > article > div > h4 {
+					text-align: center;
+					font-size: 17px;
+				}
+
+				section#zona-comentarios > div > article > div > h5 {
+					font-size: 10px;
+					margin-top: 13px;
+					margin-bottom: 3px;
+				}
+
+
+
+
+/*CSS PARA LA PÁGINA favoritas.html*/
+
+/*en un mismo documento HTML no se pueden repetir atributos name ni id, pero si title*/
+section#coleccion-fotos > article[title="favoritas"] > p > i[class="fas fa-star"]:hover {
+	border-radius: 5%;
+	border: solid 2px #E4E009;
+	cursor: pointer;
+}
+
+
+
+
+/*CSS PARA LA PÁGINA nueva.html*/
+
+.ajustarse {
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+form#new-photo {
+	width: 60%;
+	margin: 50px auto;
+	background-color: rgba(0, 0, 0, .4);
+}
+
+	form#new-photo > div {
+		padding-top: 12px;
+	}
+
+	form#new-photo > div:first-child {
+		padding-top: 35px;
+		padding-bottom: 6px;
+	}
+
+	form#new-photo > div#ficha-foto {
+		margin-top: 12px;
+	}
+
+		form#new-photo > div > textarea {
+			height: 90px;
+		}
+		
+		form#new-photo > div > p {
+			font-size: 13px;
+			margin-top: 2px;
+			margin-left: 5px;
+		}
+
+		form#new-photo > div#ficha-foto > div {
+			margin-top: 5px;
+			display: flex;
+			justify-content: center;
+		}
+
+			form#new-photo > div#ficha-foto > div > div:first-child {
+				position: relative;
+				width: 250px;
+				height: 250px;
+				border-radius: 1%;
+				border: solid 2px #000;
+				display: flex;
+			}
+
+			form#new-photo > div#ficha-foto > div > div:first-child:hover {
+				border: solid 2px #444444;
+			}
+
+				form#new-photo > div#ficha-foto > div > div:first-child > img {
+					margin: auto;
+				}
+
+				form#new-photo > div#ficha-foto > div > div:first-child > input,
+				form#new-photo > div#ficha-foto > div > div:last-child > div > input {
+					position: absolute;
+				}
+
+				form#new-photo > div#ficha-foto > div > div:first-child > input:hover,
+				form#new-photo > div#ficha-foto > div > div:last-child > div:hover {
+					cursor: default;
+				}
+
+			form#new-photo > div#ficha-foto > div > div:last-child {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				margin-left: 10px;
+			}
+
+				form#new-photo > div#ficha-foto > div > div:last-child > div {
+					position: relative;
+					background-color: #E3CA10;
+					width: 120px;
+					height: 26px;
+					border-radius: 4%;
+					margin: 10px;
+				}
+
+				form#new-photo > div#ficha-foto > div > div:last-child > div:hover {
+					background-color: #F5E267;
+				}
+
+					form#new-photo > div#ficha-foto > div > div:last-child > div > p {
+						text-align: center;
+						font-size: 14px;
+					}
+
+	form#new-photo > div:last-child {
+		text-align: center;
+		padding: 6em 0 3em 0;
+	}
+
+		form#new-photo > div:last-child > input {
+			width: 180px;
+			height: 40px;
+			border-radius: 2%;
+			background-color: #c0c;
+			border: none;
+			cursor: pointer;
+		}
+
+
+
+
+/*CSS PARA LA PÁGINA acerca.html*/
+
+section#acerca-de > div {
+	width: 85%;
+	margin: auto;
+	padding: 25px 0;
+}
+
+	section#acerca-de > div > h3,
+	section#acerca-de > div > h4 {
+		text-align: center;
+	}
+
+	section#acerca-de > div > h4 {
+		margin-bottom: 15px;
+	}
+
+
+
+
+/*Reglas media query para Responsive Design*/
+
+/*ajusta pagina foto*/
+@media all and (max-width: 900px) {
+	section#zona-comentarios {
+		width: 90%;
+	}
+
+	section#zona-comentarios > div,
+	section#zona-comentarios > form {
+		width: 90%;
+	}
+}
+
+/*
+quita etiquetas del menu y ajusta tamaño del menu
+coloca los inputs de texto de la pagina buscar de manera horizontal
+agranda el espacio reservado para la pagina de nueva foto
+agranda formulario de las paginas de registro y login
+*/
+@media all and (max-width: 830px) {
+	nav > ul > li > a {
+		padding: 15px 40px;
+	}
+
+	li > a > span {
+		display: none;
+	}
+
+	section#filtros > form#filtros-texto {
+		flex-direction: column;
+	}
+
+	section#filtros > form#filtros-texto > div {
+		margin: auto;
+		width: 85%;
+	}
+
+	form#new-photo {
+		width: 75%;
+	}
+
+	main > form#form-info,
+	section#acerca-de {
+		width: 60%;
+	}
+
+	section#detalles-foto > div {
+		flex-direction: column;
+	}
+}
+
+/*ajusta tamaño del menu*/
+@media all and (max-width: 750px) {
+	nav > ul > li > a {
+		padding: 15px 30px;
+	}
+}
+
+/*ajusta los radiobutton de la pagina buscar*/
+@media all and (max-width: 690px) {
+	section#filtros > form#filtros-radio > div > div > i {
+		display: inline;
+	}
+
+	section#filtros > form#filtros-radio > div > div > span {
+		display: none;
+	}
+}
+
+/*colocar los selectores de foto debajo de la foto para la pagina de nueva foto*/
+@media all and (max-width: 660px) {
+	form#new-photo > div#ficha-foto > div {
+			flex-direction: column;
+		}
+
+	form#new-photo > div#ficha-foto > div > div:first-child {
+		margin: 5px auto;
+	}
+
+	form#new-photo > div#ficha-foto > div > div:last-child {
+		margin: 10px auto 0px auto;
+		/*margin-left: 10px;*/
+	}
+
+	form#new-photo > div#ficha-foto > div > div:last-child > div {
+		margin: 5px;
+	}
+}
+
+/*ajusta tamaño del menu*/
+@media all and (max-width: 620px) {
+	nav > ul > li > a {
+		padding: 15px 20px;
+	}
+}
+
+/*quita descripcion de la pagina*/
+@media all and (max-width: 580px) {
+	header {
+		flex-direction: column;
+	}
+
+	header > h1 {
+		padding: 1.3em 1.3em .3em 1.4em;
+	}
+
+	header > p {
+		padding-bottom: 20px;
+	}
+}
+
+/*crea menu hamburguesa*/
+@media all and (max-width: 479px) {
+	label[for="chk"] {
+		display: block;
+	}
+
+	li > a > span {
+		display: inline;
+	}
+
+	nav {
+		position: absolute; /*para que se ajuste a la esquina superior izquierda y se mueva con el simbolo de menu hamburguesa*/
+		width: 70%;
+		background-color: #c0c;
+		margin-left: -80%;
+		transition: all .5s;
+	}
+
+	nav > ul {
+		flex-direction: column;
+		padding: 0;
+	}
+
+	nav > ul > li {
+		border-top: solid 1px #fff;
+	}
+
+	nav > ul > li:first-child {
+		border: none;
+	}
+	
+	nav > ul > li > a {
+		padding: 0;
+		color: #fff;
+		display: block; /*habia que hacer aqui un block para poder manipular el padre y que éste se ajuste a el*/
+		padding: 13px;
+	}
+
+	nav > ul > li > a:hover {
+		color: #4d4d33;
+		background-color: #fff;
+	}
+
+	/*para el nav que es hermano de el input checkbox que esta seleccionado*/
+	input#chk:checked ~ nav {
+		margin-left: 0;
+	}
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="author" content="Alejandro Castro Valero">
+	<meta name="description" content="Pagina de registro de la web">
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<title>Registro ViewWorld</title>
+</head>
+<body>
+	<header id="cabecera">
+		<h1><a href="index.html"><img src="Images/logo.png" alt="ViewWorld"></a></h1> <!-- el elemento más importante del header lo incluimos en un h1 aunque no sea texto, además el logo siempre debe llevarnos a la página de inicio -->
+		<p>Tu página web de fotografías artísticas</p>
+	</header>
+	<div>
+		<input type="checkbox" id="chk">
+		<label for="chk"><i id="btn-menu" class="fas fa-bars"></i></label>
+		<nav>
+			<ul>
+				<li><a class="icon-home" href="index.html"><span>Inicio</span></a></li>
+				<li><a class="icon-search" href="buscar.html"><span>Buscar</span></a></li>
+				<li><a class="icon-plus-circled" href="nueva.html"><span>Nueva foto</span></a></li>
+				<li><a class="icon-star" href="favoritas.html"><span>Favoritas</span></a></li>
+				<li><a class="icon-user-times" href="index.html"><span>Logout</span></a></li>
+				<li><a class="icon-user" href="login.html"><span>Login</span></a></li>
+				<li><a class="icon-user-plus" href="registro.html"><span>Registro</span></a></li>
+			</ul>
+		</nav>
+	</div>
+	<main>
+		<h2>Registro</h2>
+		<form id="form-info">
+			<div id="container-login">
+				<label for="login">Nombre de usuario:</label>
+				<input class="formulario" type="text" id="login" placeholder="Introduce el nombre de usuario" required autofocus pattern="^[a-zA-Z][a-zA-Z0-9]{3,19}$" title="Sólo letras y números, sin espacios en blanco, no empezar por número" maxlength="20">
+			</div>
+			<div>
+				<label for="pass">Contraseña:</label>
+				<input class="formulario" type="password" id="pass" placeholder="Introduce la contraseña" required title="Utilizar sólo mayúsculas, minúsculas, números y caracteres _ y -, sin espacios en blanco" pattern="^[a-zA-Z0-9/-/_]{6,20}$" maxlength="20">
+			</div>
+			<div>
+				<label for="pass2">Confirmar contraseña:</label>
+				<input class="formulario" type="password" id="pass2" placeholder="Introduce de nuevo la contraseña" title="Utilizar sólo mayúsculas, minúsculas, números y caracteres _ y -, sin espacios en blanco" pattern="^[a-zA-Z0-9/-/_]{6,20}$" maxlength="20">
+			</div>
+			<div>
+				<label for="nombre">Nombre y apellidos:</label>
+				<input class="formulario" type="text" id="nombre" placeholder="Introduce tu nombre y apellidos" required>
+			</div>
+			<div id="container-email">
+				<label for="email">Correo electrónico:</label>
+				<input class="formulario" type="email" id="email" placeholder="Introduce tu correo electrónico" required>
+			</div>
+			<div id="container-submit">
+				<input type="submit" value="Registrar">
+			</div>
+			<div id="container-text">
+				<p>¿Ya tienes una cuenta? <a href="login.html">Iniciar Sesión</a></p>
+			</div>
+		</form>
+	</main>
+	<footer>
+		<p><a href="acerca.html">Contacto</a> <span>&copy; <strong>ViewWorld</strong> 2019</span> <a class="icon-up-circled" href="#cabecera"></a></p>
+	</footer>
+</body>
+</html>

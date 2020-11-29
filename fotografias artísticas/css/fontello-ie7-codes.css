@@ -1,0 +1,9 @@
+
+.icon-user { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
+.icon-star { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
+.icon-search { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe802;&nbsp;'); }
+.icon-home { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe803;&nbsp;'); }
+.icon-plus-circled { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe804;&nbsp;'); }
+.icon-up-circled { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0aa;&nbsp;'); }
+.icon-user-plus { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf234;&nbsp;'); }
+.icon-user-times { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf235;&nbsp;'); }

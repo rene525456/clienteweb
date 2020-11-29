@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="author" content="Alejandro Castro Valero">
+	<meta name="description" content="Pagina fotografia de la web">
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<title>Foto ViewWorld</title>
+</head>
+<body>
+	<header id="cabecera">
+		<h1><a href="index.html"><img src="Images/logo.png" alt="ViewWorld"></a></h1> <!-- el elemento más importante del header lo incluimos en un h1 aunque no sea texto, además el logo siempre debe llevarnos a la página de inicio -->
+		<p>Tu página web de fotografías artísticas</p>
+	</header>
+	<div>
+		<input type="checkbox" id="chk">
+		<label for="chk"><i id="btn-menu" class="fas fa-bars"></i></label>
+		<nav>
+			<ul>
+				<li><a class="icon-home" href="index.html"><span>Inicio</span></a></li>
+				<li><a class="icon-search" href="buscar.html"><span>Buscar</span></a></li>
+				<li><a class="icon-plus-circled" href="nueva.html"><span>Nueva foto</span></a></li>
+				<li><a class="icon-star" href="favoritas.html"><span>Favoritas</span></a></li>
+				<li><a class="icon-user-times" href="index.html"><span>Logout</span></a></li>
+				<li><a class="icon-user" href="login.html"><span>Login</span></a></li>
+				<li><a class="icon-user-plus" href="registro.html"><span>Registro</span></a></li>
+			</ul>
+		</nav>
+	</div>
+	<main>
+		<section id="detalles-foto">
+			<h2>Detalles de Foto</h2>
+			<div>
+				<a href="Images/fotografia.jpg"><img src="Images/fotografia.jpg" alt="Imagen no disponible"></a>
+				<div>
+					<p>Mares de Cristal</p>
+					<p>By <a id="nom" href="buscar.html">Alejandro Castro</a></p>
+					<p>300 x 299 píxeles</p>
+					<p>0,04 MB</p>
+					<p><i class="fas fa-heart"> <a href="">1,4k</a></i></p>
+					<p><i class="fas fa-star"> <a href="">873</a></i></p>
+					<p><i class="fas fa-comments"> <a href="#comentarios">66</a></i></p>
+					<p><i class="fas fa-tags">
+						<a href="buscar.html">silencio</a>, 
+						<a href="buscar.html">sentimiento</a>, 
+						<a href="buscar.html">soledad</a>, 
+						<a href="buscar.html">hambre</a>, 
+						<a href="buscar.html">juventud</a>
+					</i></p>
+				</div>
+			</div>
+		</section>
+		<section id="zona-comentarios">
+			<h3>Escribe tu comentario</h3>
+			<form>
+				<div>
+					<label for="titulo">Título:</label>
+					<input class="formulario" type="text" id="titulo" placeholder="Introduce título" maxlength="50" required>
+				</div>
+				<div>
+					<label for="texto">Descripción:</label>
+					<textarea class="formulario" id="texto" maxlength="200" placeholder="Introduce descripción" required></textarea>
+				</div>
+				<div id="buttom-comment">
+					<input type="submit" value="Comentar">
+				</div>
+			</form>
+			<div>
+				<h3 id="comentarios">Comentarios</h3>
+				<article>
+					<div>
+						<h4>No es un buen título</h4>
+						<h5 class="icon-user">Alejandro Castro Valero <time datetime="2019-03-24T19:40">24-marzo-2019, 09:32h</time></h5>
+						<p>De todos los títulos posibles para ponerle a una foto has tenido que escoger una canción de nuestro Jona Alk. No podía haber sido uno de Ayax y Prok no...</p>
+					</div>
+				</article>
+				<article>
+					<div>
+						<h4>Elementos importantes</h4>
+						<h5 class="icon-user">Alejandro Castro Valero <time datetime="2019-03-26T19:40">26-marzo-2019, 09:32h</time></h5>
+						<p>Lo importante es aprobar la asignatura de MAC cuanto antes, porque está asignatura es imposible de llevar con las otras. Ingeniería Multimedia es un poco más jodida de lo que parece.</p>
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p><a href="acerca.html">Contacto</a> <span>&copy; <strong>ViewWorld</strong> 2019</span> <a class="icon-up-circled" href="#cabecera"></a></p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Formulario de registro</title>
+</head>
+
+<body>
+	<h1>Formulario de registro</h1>
+	<form action="" method="get">
+		<p>
+			<label for="nombre">Nombre:</label> <input type="text" name="nombre" id="nombre" maxlength="50" />
+		</p>
+		<p>
+			<label for="apellidos">Apellidos:</label> <input type="text" name="apellidos" id="apellidos"
+				maxlength="50" />
+		</p>
+		<p>
+			Sexo: 
+			<input type="radio" name="sexo" id="sexo-h" value="h" /> <label for="sexo-h">Hombre</label> 
+			<input type="radio" name="sexo" id="sexo-m" value="m" /> <label for="sexo-m">Mujer</label>
+		</p>
+		<p>
+			<label for="correo">Correo:</label> <input type="text" name="correo" id="correo" maxlength="100" />
+		</p>
+		<p>
+			<label for="poblacion">Población:</label>
+			<select name="poblacion" id="poblacion">
+				<option>Loja</option>
+				<option>Quito</option>
+				<option>Manta</option>
+				<option>Portoviejo</option>
+			</select>
+		</p>
+		<p><label for="descripcion">Descripción:</label>
+			<textarea name="descripcion" id="descripcion" rows="6" cols="60"></textarea>
+		</p>
+		<p>
+			<input type="checkbox" name="info" id="info" checked="checked" /> <label for="info">Deseo recibir
+				información sobre novedades y ofertas</label>
+		</p>
+		<p>
+			<input type="checkbox" name="condiciones" id="condiciones" /> <label for="condiciones"> Declaro haber leido
+				y aceptar las condiciones generales del programa y la normativa sobre protección de datos</label>
+		</p>
+		<p> 
+			<input type="submit" value="Enviar" />
+		</p>
+	</form>
+</body>
+</html>

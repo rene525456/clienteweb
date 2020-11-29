@@ -1,5 +1,5 @@
 <?php
-$con = @mysqli_connect("localhost","root","","pruebaajax");
+$con = @mysqli_connect("localhost","root","root","pruebaajax");
 if (!$con) {
 	echo "<p> Error al conectar con la BD ". mysql_connect_error() ."</p>";
 	exit;
